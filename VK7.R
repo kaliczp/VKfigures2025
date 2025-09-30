@@ -10,8 +10,8 @@ fig113.z <- zoo(fig113[,3],as.POSIXct(paste(as.character(fig113[,1]),as.characte
 
 ##m-be váltás
 fig111.z <- fig111.z*.3048
-fig112.z <- fig112.z*.3048;
-fig113.z <- fig113.z*.304
+fig112.z <- fig112.z*.3048
+fig113.z <- fig113.z*.3048
 
 ytg <- c(0.225,.48)
 ttfile=10

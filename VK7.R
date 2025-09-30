@@ -14,9 +14,10 @@ fig112.z <- fig112.z*.3048
 fig113.z <- fig113.z*.3048
 
 ytg <- c(0.225,.48)
-ttfile=10
+ttfile <- "7_Reigner1966"
 ttbbmeret=c(9,6)
-postscript(paste0("fig",ttfile,".eps"), paper="special", width=ttbbmeret[1]/2.54, height=ttbbmeret[2]/2.54, horiz=F, point=7)
+## postscript(paste0(ttfile,".eps"), paper="special", width=ttbbmeret[1]/2.54, height=ttbbmeret[2]/2.54, horiz=F, point=7)
+pdf(paste0(ttfile,".pdf"), width=ttbbmeret[1]/2.54, height=ttbbmeret[2]/2.54, point=7)
 par(mar=c(1.5,4,0.1,4)+.1)
 ## Felső
 plot(NULL,

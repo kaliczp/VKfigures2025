@@ -25,9 +25,15 @@ plot(NULL,
      xlab="", ylab="",
      xaxt="n",yaxt="n",
      )
+## Tengelyek
+axis(2,at=c(.25,.30,.35,.40,.45))
+axistime <- c(ISOdate(1955,8,25:31,0),ISOdate(1955,9,1:2,0))
+axis(1,at=axistime,lab=F)
+axis(1,at=axistime[-c(1,length(axistime))],lab=F,tck=1,lty=3)
 axis(1,at=c(ISOdate(1955,8,25:31,12),ISOdate(1955,9,1,12)),lab=F,tck=1,lty=3,col="lightgray")
 lines(fig111.z, lwd=2, col = "blue")
 lines(ISOdate(1955,8,c(25,29),0),c(.465,0.437),col="grey")
+rect(ISOdate(1955,8,28,22),0.445,ISOdate(1955,8,30,13),0.455, col = "white", lty = 0)
 text(ISOdate(1955,8,29,18),0.45,"Csapadék 0.8 mm",cex=.7)
 csapvon <- c(.435,0.424)
 lines(ISOdate(1955,8,29,c(8,8)),csapvon)
@@ -56,16 +62,13 @@ plot(NULL,
      xaxt="n", yaxt="n")
 lines(fig112.z, lwd=2, col = "blue")
 lines(ISOdate(1955,7:8,c(25,1),0),c(.291,0.2802),col="grey")
-## Tengelyek
-axis(2,at=c(.25,.30,.35,.40,.45))
-axistime <- c(ISOdate(1955,7,25:31,0),ISOdate(1955,8,1:2,0))
-axis(1,at=axistime,lab=F)
-axis(1,at=axistime[-c(1,length(axistime))],lab=F,tck=1,lty=3)
 par(cex=.9)
 ## Felirat háttér doboz
 rect(ISOdate(1955,7,25,11),0.41,ISOdate(1955,7,25,13),0.44, col = "white", lty = 0)
 rect(ISOdate(1955,7,25,11),0.33,ISOdate(1955,7,25,13),0.36, col = "white", lty = 0)
 rect(ISOdate(1955,7,25,11),0.24,ISOdate(1955,7,25,13),0.268, col = "white", lty = 0)
+rect(ISOdate(1955,7,25,23),0.42,ISOdate(1955,7,26,2),0.43, col = "white", lty = 0)
+rect(ISOdate(1955,7,27,22),0.34,ISOdate(1955,7,29,2),0.345, col = "white", lty = 0)
 ## Dátum feliratok
 text(ISOdate(1955,7,25:31,12),.8*.3048,25:31)
 text(ISOdate(1955,7,25,12),.86*.3048,"1955.")
@@ -73,7 +76,7 @@ text(ISOdate(1955,7,25,12),.83*.3048,"július")
 text(c(ISOdate(1955,7,25:31,12),ISOdate(1955,8,1,12)),1.1*.3048,c(29:31,1:5))
 text(ISOdate(1955,7,25,12),1.16*.3048,"1956.")
 text(ISOdate(1955,7,25,12),1.13*.3048,"július")
-text(ISOdate(1955,7,28,12),1.13*.3048,"augusztus")
+text(ISOdate(1955,7,28,12),1.125*.3048,"augusztus")
 text(ISOdate(1955,7,25:29,12),1.36*.3048,25:29)
 text(ISOdate(1955,7,25,12),1.422*.3048,"1955.")
 text(ISOdate(1955,7,25,15),1.392*.3048,"augusztus")

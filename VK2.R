@@ -24,7 +24,9 @@ pressgw.zoo <- zoo(gw[,3],chron(-14187)+gw[,1]+gw[,2]/6)
 ### Ábra
 ttfile <- 2
 ttbbmeret <- c(9,7)
-postscript(paste("fig",ttfile,".eps",sep=""),paper="special",width=ttbbmeret[1]/2.54,height=ttbbmeret[2]/2.54,horiz=F,point=7)
+## postscript(paste("fig",ttfile,".eps",sep=""),paper="special",width=ttbbmeret[1]/2.54,height=ttbbmeret[2]/2.54,horiz=F,point=7)
+pdf(paste0("fig",ttfile,".pdf"),
+    width=ttbbmeret[1]/2.54,height=ttbbmeret[2]/2.54,point=7)
 par(mar=c(2.5,3.6,.6,.5),mgp=c(2.5,0.8,0))
 par(xaxs="i")#las=1,
 plot(NULL,

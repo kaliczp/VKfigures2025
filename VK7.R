@@ -62,6 +62,11 @@ axistime <- c(ISOdate(1955,7,25:31,0),ISOdate(1955,8,1:2,0))
 axis(1,at=axistime,lab=F)
 axis(1,at=axistime[-c(1,length(axistime))],lab=F,tck=1,lty=3)
 par(cex=.9)
+## Felirat háttér doboz
+rect(ISOdate(1955,7,25,11),0.41,ISOdate(1955,7,25,13),0.44, col = "white", lty = 0)
+rect(ISOdate(1955,7,25,11),0.33,ISOdate(1955,7,25,13),0.36, col = "white", lty = 0)
+rect(ISOdate(1955,7,25,11),0.24,ISOdate(1955,7,25,13),0.268, col = "white", lty = 0)
+## Dátum feliratok
 text(ISOdate(1955,7,25:31,12),.8*.3048,25:31)
 text(ISOdate(1955,7,25,12),.86*.3048,"1955.")
 text(ISOdate(1955,7,25,12),.83*.3048,"július")
